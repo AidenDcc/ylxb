@@ -1,0 +1,28 @@
+{
+  "name": "ylxb",
+  "version": "1.0.0",
+  "private": true,
+  "description": "医路相伴 (MedPal) - 院外医患沟通平台",
+  "scripts": {
+    "dev": "concurrently -n entry,patient,doctor,mgmt,platform -c blue,green,cyan,magenta,yellow \"vite\" \"pnpm dev:patient\" \"pnpm dev:doctor\" \"pnpm dev:management\" \"pnpm dev:platform\"",
+    "dev:patient": "pnpm --filter @ylxb/patient-h5 dev",
+    "dev:doctor": "pnpm --filter @ylxb/doctor-h5 dev",
+    "dev:management": "pnpm --filter @ylxb/management-web dev",
+    "dev:platform": "pnpm --filter @ylxb/platform-web dev",
+    "build": "bash scripts/build.sh",
+    "build:patient": "pnpm --filter @ylxb/patient-h5 build",
+    "build:doctor": "pnpm --filter @ylxb/doctor-h5 build",
+    "build:management": "pnpm --filter @ylxb/management-web build",
+    "build:platform": "pnpm --filter @ylxb/platform-web build",
+    "preview": "npx serve dist"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "concurrently": "^10.0.3"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  }
+}

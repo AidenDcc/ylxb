@@ -1,0 +1,28 @@
+{
+  "name": "@ylxb/management-web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 3003",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.3.2",
+    "@ylxb/shared": "workspace:*",
+    "echarts": "^5.5.1",
+    "element-plus": "^2.8.6",
+    "pinia": "^2.1.7",
+    "vue": "^3.4.38",
+    "vue-router": "^4.3.3"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.2",
+    "typescript": "^5.5.4",
+    "unplugin-auto-import": "^0.18.2",
+    "unplugin-vue-components": "^0.27.4",
+    "vite": "^5.4.2",
+    "vue-tsc": "^2.0.29"
+  }
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>医路相伴 - 院外医患沟通平台</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif;
+      background: linear-gradient(135deg, #e8f4fd 0%, #f0f7ff 50%, #f5f7fa 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .container { max-width: 640px; width: 90%; padding: 40px 0; }
+    .header { text-align: center; margin-bottom: 48px; }
+    .logo { font-size: 72px; margin-bottom: 12px; }
+    .title {
+      font-size: 28px; font-weight: 700; color: #2c3e50; margin-bottom: 8px;
+      letter-spacing: 2px;
+    }
+    .subtitle { font-size: 14px; color: #999; letter-spacing: 1px; }
+    .cards { display: flex; flex-direction: column; gap: 16px; }
+    .card {
+      display: flex; align-items: center; gap: 20px;
+      background: #fff; border-radius: 16px; padding: 24px 28px;
+      cursor: pointer; text-decoration: none;
+      box-shadow: 0 2px 12px rgba(74, 144, 217, 0.08);
+      transition: all 0.25s ease;
+      border: 1px solid transparent;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(74, 144, 217, 0.15);
+      border-color: #4A90D9;
+    }
+    .card-icon {
+      font-size: 44px; min-width: 60px; text-align: center;
+    }
+    .card-body { flex: 1; min-width: 0; }
+    .card-title { font-size: 18px; font-weight: 600; color: #2c3e50; margin-bottom: 4px; }
+    .card-desc { font-size: 13px; color: #999; }
+    .card-badge {
+      font-size: 11px; padding: 3px 10px; border-radius: 20px; font-weight: 500;
+      white-space: nowrap;
+    }
+    .badge-h5 { background: #e8f4fd; color: #4A90D9; }
+    .badge-web { background: #f0f7ff; color: #3370b6; }
+    .card-arrow { color: #ccc; font-size: 20px; }
+    .footer { text-align: center; margin-top: 36px; font-size: 12px; color: #ccc; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">🏥</div>
+      <div class="title">医路相伴</div>
+      <div class="subtitle">MedPal · 院外医患长效随访健康管理平台</div>
+    </div>
+
+    <div class="cards">
+      <!-- 患者端 -->
+      <a class="card" href="/patient/">
+        <div class="card-icon">👨‍🦳</div>
+        <div class="card-body">
+          <div class="card-title">患者端</div>
+          <div class="card-desc">健康档案 · 咨询医生 · 用药提醒 · 商城 · 病友圈子</div>
+        </div>
+        <span class="card-badge badge-h5">H5</span>
+        <span class="card-arrow">›</span>
+      </a>
+
+      <!-- 医生端 -->
+      <a class="card" href="/doctor/">
+        <div class="card-icon">👨‍⚕️</div>
+        <div class="card-body">
+          <div class="card-title">医生端</div>
+          <div class="card-desc">患者管理 · 咨询回复 · 随访计划 · 助理账号</div>
+        </div>
+        <span class="card-badge badge-h5">H5</span>
+        <span class="card-arrow">›</span>
+      </a>
+
+      <!-- 医患管理端 -->
+      <a class="card" href="/management/">
+        <div class="card-icon">📊</div>
+        <div class="card-body">
+          <div class="card-title">医患管理端</div>
+          <div class="card-desc">数据看板 · 医生患者管理 · 商品订单 · 机构设置</div>
+        </div>
+        <span class="card-badge badge-web">Web</span>
+        <span class="card-arrow">›</span>
+      </a>
+
+      <!-- 平台端 -->
+      <a class="card" href="/platform/">
+        <div class="card-icon">🛡️</div>
+        <div class="card-body">
+          <div class="card-title">平台端</div>
+          <div class="card-desc">租户审核 · 全量总览 · 内容风控 · 合规管理 · 系统配置</div>
+        </div>
+        <span class="card-badge badge-web">Web</span>
+        <span class="card-arrow">›</span>
+      </a>
+    </div>
+
+    <div class="footer">
+      <p>演示账号见各端登录页 · 所有数据为 Mock 模拟</p>
+    </div>
+  </div>
+</body>
+</html>
