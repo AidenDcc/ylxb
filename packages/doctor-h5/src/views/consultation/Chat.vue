@@ -102,7 +102,7 @@ function scrollToBottom() {
         <span class="info-left">
           {{ session.patientName }} · {{ session.subject }}
         </span>
-        <van-tag :type="session.status === 'active' ? 'success' : 'default'" size="mini">
+        <van-tag :type="session.status === 'active' ? 'success' : 'default'" size="medium">
           {{ session.status === 'active' ? '进行中' : '已结束' }}
         </van-tag>
       </div>

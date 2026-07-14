@@ -83,7 +83,7 @@ async function fetchBlacklist() {
   }
 }
 
-async function handleRemove(row: BlacklistItem) {
+async function handleRemove(row: any) {
   try {
     await ElMessageBox.confirm(`确定要解除「${row.name}」的黑名单状态吗？`, '解除确认', {
       confirmButtonText: '确定',

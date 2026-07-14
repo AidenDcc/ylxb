@@ -45,7 +45,7 @@
               :model-value="row.isOnSale"
               active-color="#52C41A"
               inactive-color="#C0C4CC"
-              @change="(val: boolean) => handleToggleSale(row, val)"
+              @change="(val: any) => handleToggleSale(row, val)"
             />
           </template>
         </el-table-column>
@@ -116,12 +116,12 @@ async function fetchProducts() {
   }
 }
 
-function handleToggleSale(row: Product, val: boolean) {
+function handleToggleSale(row: any, val: boolean) {
   row.isOnSale = val
   ElMessage.success(val ? '已上架' : '已下架')
 }
 
-async function handleDelete(row: Product) {
+async function handleDelete(row: any) {
   try {
     await ElMessageBox.confirm(`确定要删除商品「${row.name}」吗？此操作不可恢复。`, '删除确认', {
       confirmButtonText: '确定',

@@ -63,7 +63,7 @@ const filteredKnowledge = computed(() => {
   return knowledgeList.value.filter((k) => k.title.toLowerCase().includes(kw))
 })
 
-function viewArticle(article: KnowledgeArticle) {
+function viewArticle(article: any) {
   ElMessage.info(`查看文章: ${article.title}`)
 }
 

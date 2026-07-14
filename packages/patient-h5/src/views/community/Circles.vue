@@ -25,7 +25,7 @@ onMounted(async () => {
         <div class="info">
           <div class="name">
             {{ c.name }}
-            <van-tag v-if="c.isOfficial" size="mini" type="primary">官方</van-tag>
+            <van-tag v-if="c.isOfficial" size="medium" type="primary">官方</van-tag>
           </div>
           <div class="desc">{{ c.description }}</div>
           <div class="stats">{{ c.memberCount }} 成员 · {{ c.postCount }} 帖子</div>

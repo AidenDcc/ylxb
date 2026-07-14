@@ -80,7 +80,7 @@ async function handleSubmit() {
               <span class="option-name">{{ p.name }}</span>
               <span class="option-meta">{{ p.gender === 'male' ? '男' : '女' }} · {{ p.phone }}</span>
               <span v-if="p.medicalHistory && p.medicalHistory.length" class="option-tags">
-                <van-tag v-for="tag in p.medicalHistory.slice(0, 2)" :key="tag" type="warning" size="mini" plain style="margin-left:4px">
+                <van-tag v-for="tag in p.medicalHistory.slice(0, 2)" :key="tag" type="warning" size="medium" plain style="margin-left:4px">
                   {{ tag }}
                 </van-tag>
               </span>

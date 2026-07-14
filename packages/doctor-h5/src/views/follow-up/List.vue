@@ -59,7 +59,7 @@ const frequencyLabels: Record<string, string> = {
       >
         <div class="card-header">
           <span class="plan-title">{{ plan.title }}</span>
-          <van-tag :type="statusColors[plan.status] as any" size="mini">
+          <van-tag :type="statusColors[plan.status] as any" size="medium">
             {{ statusLabels[plan.status] || plan.status }}
           </van-tag>
         </div>

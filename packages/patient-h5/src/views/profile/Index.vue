@@ -20,8 +20,8 @@ function handleLogout() {
       <span class="avatar">{{ auth.user?.avatar || '👤' }}</span>
       <div class="name">{{ auth.user?.name || '用户' }}</div>
       <div class="phone">{{ auth.user?.phone?.replace(/(\d{3})\d{4}(\d{4})/, '$1****$2') || '' }}</div>
-      <van-tag v-if="auth.user?.realNameVerified" type="success" size="small">已实名</van-tag>
-      <van-tag v-else type="warning" size="small" @click="router.push('/verify-identity')">去认证</van-tag>
+      <van-tag v-if="auth.user?.realNameVerified" type="success" size="medium">已实名</van-tag>
+      <van-tag v-else type="warning" size="medium" @click="router.push('/verify-identity')">去认证</van-tag>
     </div>
 
     <div class="menu-section">

@@ -47,8 +47,8 @@ async function handleUpload() {
               <strong>{{ item.value }}</strong> {{ item.unit }}
               <span class="r-ref">参考：{{ item.referenceRange }}</span>
             </div>
-            <van-tag v-if="item.abnormal" size="mini" type="danger">↑异常</van-tag>
-            <van-tag v-else size="mini" type="success">正常</van-tag>
+            <van-tag v-if="item.abnormal" size="medium" type="danger">↑异常</van-tag>
+            <van-tag v-else size="medium" type="success">正常</van-tag>
           </div>
         </div>
         <div class="summary">

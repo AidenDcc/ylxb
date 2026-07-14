@@ -100,7 +100,7 @@ const quickActions = [
         >
           <div class="consult-top">
             <span class="patient-name">{{ c.patientName }}</span>
-            <van-tag type="primary" size="mini">{{ c.subject }}</van-tag>
+            <van-tag type="primary" size="medium">{{ c.subject }}</van-tag>
             <van-badge v-if="c.unreadDoctorCount > 0" :content="c.unreadDoctorCount" />
           </div>
           <div class="consult-msg">{{ c.lastMessage || '暂无消息' }}</div>

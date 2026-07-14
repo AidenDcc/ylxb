@@ -33,7 +33,7 @@ const typeIcons: Record<string, string> = {
           <div class="record-content">
             <div class="record-title">{{ r.title }}</div>
             <div class="record-meta">
-              <van-tag size="mini" type="primary">{{ HealthRecordTypeLabels[r.type] || r.type }}</van-tag>
+              <van-tag size="medium" type="primary">{{ HealthRecordTypeLabels[r.type] || r.type }}</van-tag>
               <span class="record-date">{{ r.createdAt.slice(0, 10) }}</span>
             </div>
             <div class="record-desc" v-if="r.content">{{ r.content.slice(0, 60) }}{{ r.content.length > 60 ? '...' : '' }}</div>

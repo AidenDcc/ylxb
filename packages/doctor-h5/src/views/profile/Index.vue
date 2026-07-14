@@ -31,7 +31,7 @@ function goTenantSwitch() {
         <span class="avatar">{{ auth.user?.avatar || '👨‍⚕️' }}</span>
         <div class="name">{{ auth.user?.name || '未登录' }}</div>
         <div class="title">
-          <van-tag type="primary" size="small">{{ auth.user?.title || '' }}</van-tag>
+          <van-tag type="primary" size="medium">{{ auth.user?.title || '' }}</van-tag>
           <span class="dept">{{ auth.user?.department || '' }}</span>
         </div>
         <div class="hospital" v-if="auth.user?.hospital">{{ auth.user.hospital }}</div>

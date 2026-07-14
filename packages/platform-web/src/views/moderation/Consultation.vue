@@ -91,9 +91,9 @@ function statusLabel(status: string): string {
   return map[status] || status
 }
 
-function statusTag(status: string): string {
+function statusTag(status: string): 'success' | 'primary' | 'warning' | 'info' | 'danger' {
   const map: Record<string, string> = { active: 'success', closed: 'info', rated: 'warning' }
-  return map[status] || 'info'
+  return (map[status] || 'info') as 'success' | 'primary' | 'warning' | 'info' | 'danger'
 }
 
 function formatDate(dateStr: string): string {

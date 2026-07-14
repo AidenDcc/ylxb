@@ -45,7 +45,7 @@ function buyNow() {
       <div class="p-price">
         <span class="price">{{ formatMoney(product.price) }}</span>
         <span class="orig" v-if="product.originalPrice > product.price">{{ formatMoney(product.originalPrice) }}</span>
-        <van-tag v-if="product.prescriptionRequired" size="mini" type="danger">处方药</van-tag>
+        <van-tag v-if="product.prescriptionRequired" size="medium" type="danger">处方药</van-tag>
       </div>
     </div>
     <div class="desc-section">

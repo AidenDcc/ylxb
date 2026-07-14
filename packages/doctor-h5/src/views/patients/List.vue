@@ -51,7 +51,7 @@ function goDetail(id: string) {
           <div class="patient-info">
             <div class="patient-name">
               {{ patient.name }}
-              <van-tag :type="patient.gender === 'male' ? 'primary' : 'danger'" size="mini" style="margin-left:6px">
+              <van-tag :type="patient.gender === 'male' ? 'primary' : 'danger'" size="medium" style="margin-left:6px">
                 {{ patient.gender === 'male' ? '男' : '女' }}
               </van-tag>
             </div>
@@ -66,7 +66,7 @@ function goDetail(id: string) {
             v-for="tag in patient.medicalHistory"
             :key="tag"
             type="warning"
-            size="mini"
+            size="medium"
             plain
             style="margin-right:4px; margin-top:4px;"
           >

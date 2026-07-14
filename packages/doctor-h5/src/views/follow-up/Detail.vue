@@ -76,14 +76,14 @@ const typeLabels: Record<string, string> = {
             <span class="task-title">{{ task.title }}</span>
             <van-tag
               :type="(task.status === 'completed' ? 'success' : task.status === 'missed' ? 'danger' : 'warning') as any"
-              size="mini"
+              size="medium"
             >
               {{ statusLabels[task.status] || task.status }}
             </van-tag>
           </div>
           <div class="task-desc" v-if="task.description">{{ task.description }}</div>
           <div class="task-meta">
-            <van-tag type="primary" size="mini">{{ typeLabels[task.type] || task.type }}</van-tag>
+            <van-tag type="primary" size="medium">{{ typeLabels[task.type] || task.type }}</van-tag>
             <span class="task-time">安排于 {{ task.scheduledAt?.slice(0, 16) || '' }}</span>
           </div>
           <div v-if="task.status === 'completed' && task.completedAt" class="task-completed">

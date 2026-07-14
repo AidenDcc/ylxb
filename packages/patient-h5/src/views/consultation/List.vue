@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import { get } from '@ylxb/shared'
 import type { ConsultationSession } from '@ylxb/shared'
@@ -8,6 +8,12 @@ import { timeAgo } from '@ylxb/shared'
 const router = useRouter()
 const sessions = ref<ConsultationSession[]>([])
 const loading = ref(true)
+const activeTab = ref(0)
+
+const filteredSessions = computed(() => {
+  const active = activeTab.value === 0
+  return sessions.value.filter(s => active ? s.status === 'active' : s.status !== 'active')
+})
 
 onMounted(async () => {
   const res = await get<ConsultationSession[]>('/consultation/sessions')
@@ -29,7 +35,7 @@ onMounted(async () => {
           <div class="s-header">
             <span class="doctor-avatar">{{ s.doctorAvatar }}</span>
             <div class="doctor-info">
-              <div class="doctor-name">{{ s.doctorName }} <van-tag size="mini" type="primary">{{ s.doctorTitle }}</van-tag></div>
+              <div class="doctor-name">{{ s.doctorName }} <van-tag size="medium" type="primary">{{ s.doctorTitle }}</van-tag></div>
               <div class="doctor-dept">{{ s.doctorDepartment }} · {{ s.tenantName }}</div>
             </div>
             <van-badge v-if="s.unreadPatientCount" :content="s.unreadPatientCount" />
@@ -48,14 +54,6 @@ onMounted(async () => {
   </div>
 </template>
 
-<script lang="ts">
-import { computed } from 'vue'
-const activeTab = ref(0)
-const filteredSessions = computed(() => {
-  const active = activeTab.value === 0
-  return sessions.value.filter(s => active ? s.status === 'active' : s.status !== 'active')
-})
-</script>
 
 <style scoped>
 .consultation-page { min-height: 100vh; background: #f5f7fa; }

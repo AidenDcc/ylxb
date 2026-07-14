@@ -63,7 +63,7 @@ const statusLabels: Record<string, string> = {
             <div class="session-header">
               <span class="patient-name">{{ session.patientName }}</span>
               <van-badge v-if="session.unreadDoctorCount > 0" :content="session.unreadDoctorCount" />
-              <van-tag :type="session.status === 'active' ? 'success' : 'default'" size="mini" style="margin-left:6px">
+              <van-tag :type="session.status === 'active' ? 'success' : 'default'" size="medium" style="margin-left:6px">
                 {{ statusLabels[session.status] || session.status }}
               </van-tag>
             </div>
@@ -73,7 +73,7 @@ const statusLabels: Record<string, string> = {
         </div>
         <div class="card-bottom">
           <span class="session-time">{{ session.lastMessageAt?.slice(0, 16) || '' }}</span>
-          <van-tag type="primary" size="mini">{{ session.doctorName }}</van-tag>
+          <van-tag type="primary" size="medium">{{ session.doctorName }}</van-tag>
         </div>
       </div>
     </van-list>

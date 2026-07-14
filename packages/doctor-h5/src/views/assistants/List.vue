@@ -61,18 +61,18 @@ async function handleDelete(id: string) {
             <div class="assistant-name">{{ assistant.name }}</div>
             <div class="assistant-phone">{{ assistant.phone }}</div>
             <div class="assistant-status">
-              <van-tag :type="assistant.status === 'active' ? 'success' : 'danger'" size="mini">
+              <van-tag :type="assistant.status === 'active' ? 'success' : 'danger'" size="medium">
                 {{ assistant.status === 'active' ? '正常' : '已禁用' }}
               </van-tag>
             </div>
           </div>
         </div>
         <div class="card-permissions">
-          <van-tag v-if="assistant.permissions.canReplyConsultation" type="primary" size="mini" plain>可回复咨询</van-tag>
-          <van-tag v-if="assistant.permissions.canViewPatient" type="primary" size="mini" plain>可查看患者</van-tag>
-          <van-tag v-if="assistant.permissions.canManageFollowUp" type="primary" size="mini" plain>可管理随访</van-tag>
-          <van-tag v-if="assistant.permissions.canViewOrders" type="primary" size="mini" plain>可查看订单</van-tag>
-          <van-tag v-if="assistant.permissions.canExportData" type="primary" size="mini" plain>可导出数据</van-tag>
+          <van-tag v-if="assistant.permissions.canReplyConsultation" type="primary" size="medium" plain>可回复咨询</van-tag>
+          <van-tag v-if="assistant.permissions.canViewPatient" type="primary" size="medium" plain>可查看患者</van-tag>
+          <van-tag v-if="assistant.permissions.canManageFollowUp" type="primary" size="medium" plain>可管理随访</van-tag>
+          <van-tag v-if="assistant.permissions.canViewOrders" type="primary" size="medium" plain>可查看订单</van-tag>
+          <van-tag v-if="assistant.permissions.canExportData" type="primary" size="medium" plain>可导出数据</van-tag>
         </div>
         <div class="card-actions">
           <van-button size="small" type="primary" plain @click="goPermission(assistant.id)">配置权限</van-button>

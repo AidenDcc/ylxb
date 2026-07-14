@@ -59,7 +59,7 @@ async function handleSave() {
         <div class="info">
           <div class="name">{{ assistant.name }}</div>
           <div class="phone">{{ assistant.phone }}</div>
-          <van-tag :type="assistant.status === 'active' ? 'success' : 'danger'" size="mini">
+          <van-tag :type="assistant.status === 'active' ? 'success' : 'danger'" size="medium">
             {{ assistant.status === 'active' ? '正常' : '已禁用' }}
           </van-tag>
         </div>

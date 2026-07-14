@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import { get } from '@ylxb/shared'
 import type { Product } from '@ylxb/shared'
@@ -16,6 +16,8 @@ const categories = [
   { key: 'device', label: '器械' },
   { key: 'wearable', label: '穿戴' },
 ]
+
+const filteredProducts = computed(() => activeCategory.value === 'all' ? products.value : products.value.filter(p => p.category === activeCategory.value))
 
 onMounted(async () => {
   const res = await get<Product[]>('/mall/products')
@@ -54,10 +56,6 @@ onMounted(async () => {
   </div>
 </template>
 
-<script lang="ts">
-import { computed } from 'vue'
-const filteredProducts = computed(() => activeCategory.value === 'all' ? products.value : products.value.filter(p => p.category === activeCategory.value))
-</script>
 
 <style scoped>
 .mall-page { min-height: 100vh; background: #f5f7fa; }

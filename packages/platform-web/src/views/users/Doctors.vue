@@ -81,9 +81,9 @@ function verifyLabel(status: string): string {
   return map[status] || status
 }
 
-function verifyTag(status: string): string {
+function verifyTag(status: string): 'success' | 'primary' | 'warning' | 'info' | 'danger' {
   const map: Record<string, string> = { verified: 'success', pending: 'warning', unverified: 'info', rejected: 'danger' }
-  return map[status] || 'info'
+  return (map[status] || 'info') as 'success' | 'primary' | 'warning' | 'info' | 'danger'
 }
 
 function formatDate(dateStr: string): string {

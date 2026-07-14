@@ -8,7 +8,7 @@ import { showToast } from 'vant'
 
 const route = useRoute()
 const router = useRouter()
-const post = ref<Post | null>(null)
+const postDetail = ref<Post | null>(null)
 const comments = ref<Comment[]>([])
 const commentText = ref('')
 const sending = ref(false)
@@ -19,18 +19,18 @@ onMounted(async () => {
     get<Post>(`/community/posts/${postId}`),
     get<Comment[]>(`/community/comments/${postId}`),
   ])
-  if (pRes.code === 0) post.value = pRes.data as unknown as Post
+  if (pRes.code === 0) postDetail.value = pRes.data as unknown as Post
   if (cRes.code === 0) comments.value = cRes.data as unknown as Comment[]
 })
 
 async function handleLike() {
   const res = await post('/community/like', { postId: route.params.id as string })
-  if (res.code === 0 && post.value) { post.value.isLiked = true; post.value.likeCount++ }
+  if (res.code === 0 && postDetail.value) { postDetail.value.isLiked = true; postDetail.value.likeCount++ }
 }
 
 async function handleCollect() {
   const res = await post('/community/collect', { postId: route.params.id as string })
-  if (res.code === 0 && post.value) { post.value.isCollected = true; post.value.collectCount++; showToast('已收藏') }
+  if (res.code === 0 && postDetail.value) { postDetail.value.isCollected = true; postDetail.value.collectCount++; showToast('已收藏') }
 }
 
 async function handleComment() {
@@ -50,21 +50,21 @@ async function handleComment() {
 </script>
 
 <template>
-  <div class="post-detail" v-if="post">
+  <div class="post-detail" v-if="postDetail">
     <van-nav-bar title="帖子详情" left-arrow @click-left="router.back()" />
     <div class="content">
       <div class="post-header">
-        <span class="avatar">{{ post.authorAvatar }}</span>
+        <span class="avatar">{{ postDetail.authorAvatar }}</span>
         <div>
-          <div class="name">{{ post.authorName }} <van-tag v-if="post.authorRole==='doctor'" size="mini" type="primary">医生</van-tag></div>
-          <div class="time">{{ timeAgo(post.createdAt) }}</div>
+          <div class="name">{{ postDetail.authorName }} <van-tag v-if="postDetail.authorRole==='doctor'" size="medium" type="primary">医生</van-tag></div>
+          <div class="time">{{ timeAgo(postDetail.createdAt) }}</div>
         </div>
       </div>
-      <div class="post-body">{{ post.content }}</div>
+      <div class="post-body">{{ postDetail.content }}</div>
       <div class="post-actions">
-        <span @click="handleLike">❤️ {{ post.likeCount }}</span>
-        <span>💬 {{ post.commentCount }}</span>
-        <span @click="handleCollect">⭐ {{ post.collectCount }}</span>
+        <span @click="handleLike">❤️ {{ postDetail.likeCount }}</span>
+        <span>💬 {{ postDetail.commentCount }}</span>
+        <span @click="handleCollect">⭐ {{ postDetail.collectCount }}</span>
       </div>
     </div>
     <!-- 评论列表 -->

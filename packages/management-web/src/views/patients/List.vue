@@ -128,7 +128,7 @@ async function fetchPatients() {
   }
 }
 
-async function handleBlacklist(row: Patient) {
+async function handleBlacklist(row: any) {
   try {
     await ElMessageBox.confirm(`确定要将患者「${row.name}」加入黑名单吗？加入后该患者将无法使用当前机构服务。`, '拉黑确认', {
       confirmButtonText: '确定',

@@ -137,7 +137,7 @@ function formatDate(dateStr: string): string {
   return sharedFormatDate(dateStr, 'YYYY-MM-DD HH:mm') || dateStr
 }
 
-function handleHide(row: Post) {
+function handleHide(row: any) {
   currentPost.value = row
   hideReason.value = ''
   hideVisible.value = true

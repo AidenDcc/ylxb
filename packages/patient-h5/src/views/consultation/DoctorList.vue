@@ -49,11 +49,11 @@ async function handleConsult(doctor: Doctor) {
       <div v-for="d in doctors" :key="d.id" class="doctor-card" @click="handleConsult(d)">
         <span class="d-avatar">{{ d.avatar }}</span>
         <div class="d-info">
-          <div class="d-name">{{ d.name }} <van-tag size="mini" type="primary">{{ d.title }}</van-tag></div>
+          <div class="d-name">{{ d.name }} <van-tag size="medium" type="primary">{{ d.title }}</van-tag></div>
           <div class="d-dept">{{ d.department }} · {{ d.hospital }}</div>
           <div class="d-bio" v-if="d.bio">{{ d.bio }}</div>
           <div class="d-specialties">
-            <van-tag v-for="s in d.specialties" :key="s" size="mini" plain>{{ s }}</van-tag>
+            <van-tag v-for="s in d.specialties" :key="s" size="medium" plain>{{ s }}</van-tag>
           </div>
         </div>
       </div>

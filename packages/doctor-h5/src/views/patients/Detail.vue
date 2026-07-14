@@ -57,7 +57,7 @@ onMounted(async () => {
       </div>
       <div class="info-row" v-if="patient.medicalHistory && patient.medicalHistory.length > 0">
         <span>既往病史：</span>
-        <van-tag v-for="tag in patient.medicalHistory" :key="tag" type="warning" size="mini" plain style="margin-right:4px; margin-top:2px;">
+        <van-tag v-for="tag in patient.medicalHistory" :key="tag" type="warning" size="medium" plain style="margin-right:4px; margin-top:2px;">
           {{ tag }}
         </van-tag>
       </div>
@@ -73,11 +73,11 @@ onMounted(async () => {
           <div v-for="record in healthRecords" :key="record.id" class="record-item">
             <div class="record-header">
               <span class="record-title">{{ record.title }}</span>
-              <van-tag type="primary" size="mini">{{ record.type }}</van-tag>
+              <van-tag type="primary" size="medium">{{ record.type }}</van-tag>
             </div>
             <div class="record-content">{{ record.content }}</div>
             <div class="record-tags" v-if="record.tags && record.tags.length > 0">
-              <van-tag v-for="tag in record.tags" :key="tag" size="mini" plain>{{ tag }}</van-tag>
+              <van-tag v-for="tag in record.tags" :key="tag" size="medium" plain>{{ tag }}</van-tag>
             </div>
             <div class="record-time">{{ record.createdAt?.slice(0, 10) || '' }}</div>
           </div>
@@ -106,7 +106,7 @@ onMounted(async () => {
           <div v-for="c in consultations" :key="c.id" class="consult-item" @click="router.push('/consultation/chat/' + c.id)">
             <div class="consult-header">
               <span class="consult-subject">{{ c.subject }}</span>
-              <van-tag :type="c.status === 'active' ? 'success' : 'default'" size="mini">
+              <van-tag :type="c.status === 'active' ? 'success' : 'default'" size="medium">
                 {{ c.status === 'active' ? '进行中' : '已结束' }}
               </van-tag>
             </div>

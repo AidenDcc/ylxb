@@ -33,7 +33,7 @@ onMounted(async () => {
           <div class="p-author">
             <div class="p-name">
               {{ p.authorName }}
-              <van-tag v-if="p.authorRole === 'doctor'" size="mini" type="primary">医生</van-tag>
+              <van-tag v-if="p.authorRole === 'doctor'" size="medium" type="primary">医生</van-tag>
             </div>
             <div class="p-tenants" v-if="p.authorTenants.length">{{ p.authorTenants.join('、') }}</div>
           </div>

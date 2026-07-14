@@ -89,8 +89,8 @@ function typeLabel(type: TenantType): string {
   return typeLabels[type] || type
 }
 
-function typeTag(type: TenantType): string {
-  return typeTags[type] || 'info'
+function typeTag(type: TenantType): 'success' | 'primary' | 'warning' | 'info' | 'danger' {
+  return (typeTags[type] || 'info') as 'success' | 'primary' | 'warning' | 'info' | 'danger'
 }
 
 function statusLabel(status: string): string {
@@ -98,9 +98,9 @@ function statusLabel(status: string): string {
   return map[status] || status
 }
 
-function statusTag(status: string): string {
+function statusTag(status: string): 'success' | 'primary' | 'warning' | 'info' | 'danger' {
   const map: Record<string, string> = { active: 'success', disabled: 'danger', pending: 'warning' }
-  return map[status] || 'info'
+  return (map[status] || 'info') as 'success' | 'primary' | 'warning' | 'info' | 'danger'
 }
 
 function formatDate(dateStr: string): string {

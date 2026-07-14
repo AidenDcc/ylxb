@@ -102,7 +102,7 @@ async function fetchDoctors() {
   }
 }
 
-async function handleRemove(row: Doctor) {
+async function handleRemove(row: any) {
   try {
     await ElMessageBox.confirm(`确定要从机构中移除医生「${row.name}」吗？`, '移除确认', {
       confirmButtonText: '确定',

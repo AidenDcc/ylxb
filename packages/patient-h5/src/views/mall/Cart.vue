@@ -43,7 +43,7 @@ async function checkout() {
         <div class="item-info">
           <div class="item-name">{{ item.productName }}</div>
           <div class="item-price">{{ formatMoney(item.price) }}</div>
-          <van-tag v-if="item.prescriptionRequired" size="mini" type="danger">处方药</van-tag>
+          <van-tag v-if="item.prescriptionRequired" size="medium" type="danger">处方药</van-tag>
         </div>
         <van-stepper v-model="item.quantity" min="1" max="99" />
       </div>

@@ -40,7 +40,7 @@ const grouped = computed(() => {
             <div v-for="s in items.slice(0, 7)" :key="s.id" class="value-item" :class="{ abnormal: s.isAbnormal }">
               <span class="val">{{ s.value }}</span>
               <span class="time">{{ s.recordedAt?.slice(5, 16)?.replace('T', ' ') || '' }}</span>
-              <van-tag v-if="s.isAbnormal" size="mini" type="danger">异常</van-tag>
+              <van-tag v-if="s.isAbnormal" size="medium" type="danger">异常</van-tag>
             </div>
           </div>
         </div>

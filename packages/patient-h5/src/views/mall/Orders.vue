@@ -30,7 +30,7 @@ onMounted(async () => {
       <div v-for="o in orders" :key="o.id" class="order-card" @click="router.push(`/mall/order/${o.id}`)">
         <div class="o-header">
           <span>{{ o.tenantName }}</span>
-          <van-tag :type="o.status === 'completed' ? 'success' : o.status === 'shipped' ? 'primary' : 'warning'" size="mini">
+          <van-tag :type="o.status === 'completed' ? 'success' : o.status === 'shipped' ? 'primary' : 'warning'" size="medium">
             {{ OrderStatusLabels[o.status] || o.status }}
           </van-tag>
         </div>

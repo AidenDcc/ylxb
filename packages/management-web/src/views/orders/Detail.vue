@@ -146,7 +146,7 @@ function statusLabel(status?: string): string {
   return OrderStatusLabels[status] || status
 }
 
-function statusType(status?: string): string {
+function statusType(status?: string): 'success' | 'primary' | 'warning' | 'info' | 'danger' {
   const map: Record<string, string> = {
     pending: 'warning',
     paid: 'primary',
@@ -155,7 +155,7 @@ function statusType(status?: string): string {
     refunded: 'danger',
     cancelled: 'info',
   }
-  return map[status || ''] || 'info'
+  return (map[status || ''] || 'info') as 'success' | 'primary' | 'warning' | 'info' | 'danger'
 }
 
 function formatTime(str?: string): string {
