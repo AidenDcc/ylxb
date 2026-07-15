@@ -162,6 +162,9 @@ dist/
 └── platform/           # 平台端
 ```
 
+### 快速演示地址
+https://ylxb.pages.dev/
+
 ### 快速演示账号
 
 | 角色 | 手机号 | 说明 |
