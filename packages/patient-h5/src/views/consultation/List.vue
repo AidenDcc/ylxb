@@ -63,7 +63,7 @@ onMounted(async () => {
 .doctor-avatar { font-size: 36px; }
 .doctor-info { flex: 1; }
 .doctor-name { font-size: 15px; font-weight: 500; }
-.doctor-dept { font-size: 12px; color: #999; margin-top: 2px; }
-.s-subject { font-size: 13px; color: #666; margin: 8px 0; padding: 6px 10px; background: #f5f7fa; border-radius: 6px; }
-.s-footer { display: flex; justify-content: space-between; font-size: 12px; color: #ccc; }
+.doctor-dept { font-size: 14px; color: #999; margin-top: 2px; }
+.s-subject { font-size: 14px; color: #666; margin: 8px 0; padding: 6px 10px; background: #f5f7fa; border-radius: 6px; }
+.s-footer { display: flex; justify-content: space-between; font-size: 14px; color: #ccc; }
 </style>

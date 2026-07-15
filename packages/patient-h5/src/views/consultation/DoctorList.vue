@@ -67,8 +67,8 @@ async function handleConsult(doctor: Doctor) {
 .doctor-card { background: #fff; border-radius: 12px; padding: 14px; margin-bottom: 10px; display: flex; gap: 12px; cursor: pointer; }
 .d-avatar { font-size: 40px; }
 .d-name { font-size: 15px; font-weight: 500; margin-bottom: 2px; }
-.d-dept { font-size: 12px; color: #999; }
-.d-bio { font-size: 12px; color: #666; margin-top: 6px; }
+.d-dept { font-size: 14px; color: #999; }
+.d-bio { font-size: 14px; color: #666; margin-top: 6px; }
 .d-specialties { margin-top: 6px; display: flex; gap: 4px; flex-wrap: wrap; }
 .warning { margin: 12px 16px 0; }
 </style>

@@ -56,13 +56,13 @@ onMounted(async () => {
 .orders-page { min-height: 100vh; background: #f5f7fa; }
 .order-list { padding: 12px 16px; }
 .order-card { background: #fff; border-radius: 12px; margin-bottom: 10px; overflow: hidden; cursor: pointer; }
-.o-header { display: flex; justify-content: space-between; padding: 10px 14px; font-size: 13px; border-bottom: 1px solid #f5f5f5; }
+.o-header { display: flex; justify-content: space-between; padding: 10px 14px; font-size: 14px; border-bottom: 1px solid #f5f5f5; }
 .o-item { display: flex; align-items: center; gap: 10px; padding: 10px 14px; }
 .o-img { font-size: 32px; }
 .o-info { flex: 1; }
-.o-name { font-size: 13px; }
-.o-qty { font-size: 11px; color: #999; }
-.o-price { font-size: 13px; font-weight: 500; }
-.o-footer { display: flex; justify-content: space-between; padding: 10px 14px; font-size: 12px; color: #999; border-top: 1px solid #f5f5f5; }
+.o-name { font-size: 14px; }
+.o-qty { font-size: 14px; color: #999; }
+.o-price { font-size: 14px; font-weight: 500; }
+.o-footer { display: flex; justify-content: space-between; padding: 10px 14px; font-size: 14px; color: #999; border-top: 1px solid #f5f5f5; }
 .total strong { color: #333; font-size: 14px; }
 </style>

@@ -45,7 +45,7 @@ async function handleSubmit() {
 .verify-page { min-height: 100vh; background: #f5f7fa; }
 .form-wrap { background: #fff; margin: 16px; border-radius: 12px; padding: 8px 0 24px 16px; }
 .upload-section { padding: 16px 16px 16px 0; }
-.upload-section .label { font-size: 13px; color: #666; margin-bottom: 12px; }
+.upload-section .label { font-size: 14px; color: #666; margin-bottom: 12px; }
 .upload-box { display: flex; gap: 16px; }
-.upload-item { width: 120px; height: 80px; border: 1px dashed #ddd; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; font-size: 12px; color: #999; }
+.upload-item { width: 120px; height: 80px; border: 1px dashed #ddd; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; font-size: 14px; color: #999; }
 </style>

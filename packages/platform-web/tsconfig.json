@@ -18,7 +18,9 @@
     "paths": {
       "@/*": ["src/*"],
       "@ylxb/shared": ["../shared/src"],
-      "@ylxb/shared/*": ["../shared/src/*"]
+      "@ylxb/shared/*": ["../shared/src/*"],
+      "@images": ["../shared/images"],
+      "@images/*": ["../shared/images/*"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.vue"],

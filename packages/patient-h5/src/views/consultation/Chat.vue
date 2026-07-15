@@ -97,7 +97,7 @@ async function handleCloseSession() {
 .msg-bubble { max-width: 80%; padding: 10px 14px; border-radius: 12px; background: #fff; }
 .msg-item.mine .msg-bubble { background: #4A90D9; color: #fff; }
 .msg-text { font-size: 14px; line-height: 1.5; }
-.msg-time { font-size: 10px; opacity: 0.5; margin-top: 4px; text-align: right; }
+.msg-time { font-size: 14px; opacity: 0.5; margin-top: 4px; text-align: right; }
 .input-bar { display: flex; align-items: center; gap: 8px; padding: 8px 12px; background: #fff; border-top: 1px solid #eee; }
-.closed-hint { text-align: center; padding: 6px; font-size: 12px; color: #999; background: #fff; }
+.closed-hint { text-align: center; padding: 6px; font-size: 14px; color: #999; background: #fff; }
 </style>

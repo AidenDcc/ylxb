@@ -57,5 +57,5 @@ async function handleLogin() {
 .login-header p { font-size: 14px; color: #999; }
 .login-form { background: #fff; border-radius: 16px; padding: 24px 16px; }
 .links { text-align: center; margin-top: 16px; font-size: 14px; color: var(--primary); cursor: pointer; }
-.demo-hint { margin-top: 20px; padding: 12px; background: #fffbe6; border-radius: 8px; font-size: 12px; color: #999; text-align: center; line-height: 1.8; }
+.demo-hint { margin-top: 20px; padding: 12px; background: #fffbe6; border-radius: 8px; font-size: 14px; color: #999; text-align: center; line-height: 1.8; }
 </style>

@@ -63,6 +63,6 @@ async function deleteReminder(id: string) {
 .time-badge { background: #4A90D9; color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 14px; font-weight: 600; white-space: nowrap; }
 .drug-info { flex: 1; }
 .drug-name { font-size: 15px; font-weight: 600; }
-.drug-meta { font-size: 12px; color: #999; margin-top: 2px; }
-.card-foot { display: flex; justify-content: space-between; align-items: center; margin-top: 12px; padding-top: 12px; border-top: 1px solid #f5f5f5; font-size: 12px; color: #ccc; }
+.drug-meta { font-size: 14px; color: #999; margin-top: 2px; }
+.card-foot { display: flex; justify-content: space-between; align-items: center; margin-top: 12px; padding-top: 12px; border-top: 1px solid #f5f5f5; font-size: 14px; color: #ccc; }
 </style>

@@ -14,6 +14,7 @@ export default defineConfig({
     alias: {
       '@': resolve(__dirname, 'src'),
       '@ylxb/shared': resolve(__dirname, '../shared/src'),
+      '@images': resolve(__dirname, '../shared/images'),
     },
   },
   server: {

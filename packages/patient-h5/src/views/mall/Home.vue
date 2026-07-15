@@ -60,16 +60,16 @@ onMounted(async () => {
 <style scoped>
 .mall-page { min-height: 100vh; background: #f5f7fa; }
 .category-bar { display: flex; gap: 0; background: #fff; padding: 8px 16px; overflow-x: auto; }
-.cat-item { padding: 6px 16px; border-radius: 20px; font-size: 13px; white-space: nowrap; cursor: pointer; }
+.cat-item { padding: 6px 16px; border-radius: 20px; font-size: 14px; white-space: nowrap; cursor: pointer; }
 .cat-item.active { background: #4A90D9; color: #fff; }
 .product-grid { padding: 12px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .product-card { background: #fff; border-radius: 10px; overflow: hidden; cursor: pointer; }
 .p-image { height: 120px; display: flex; align-items: center; justify-content: center; font-size: 48px; background: #f8f9fa; }
 .p-info { padding: 10px; }
-.p-name { font-size: 13px; font-weight: 500; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.p-spec { font-size: 11px; color: #ccc; margin: 4px 0; }
+.p-name { font-size: 14px; font-weight: 500; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.p-spec { font-size: 14px; color: #ccc; margin: 4px 0; }
 .p-price { margin-top: 4px; }
 .price { color: #F5222D; font-size: 16px; font-weight: 700; }
-.orig-price { font-size: 11px; color: #ccc; text-decoration: line-through; margin-left: 4px; }
-.p-sold { font-size: 10px; color: #ccc; margin-top: 2px; }
+.orig-price { font-size: 14px; color: #ccc; text-decoration: line-through; margin-left: 4px; }
+.p-sold { font-size: 14px; color: #ccc; margin-top: 2px; }
 </style>

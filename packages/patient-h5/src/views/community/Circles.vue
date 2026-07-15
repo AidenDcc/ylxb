@@ -42,6 +42,6 @@ onMounted(async () => {
 .cover { font-size: 40px; }
 .info { flex: 1; }
 .name { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
-.desc { font-size: 12px; color: #999; margin-bottom: 4px; }
-.stats { font-size: 11px; color: #ccc; }
+.desc { font-size: 14px; color: #999; margin-bottom: 4px; }
+.stats { font-size: 14px; color: #ccc; }
 </style>

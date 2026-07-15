@@ -57,6 +57,6 @@ const typeIcons: Record<string, string> = {
 .record-content { flex: 1; min-width: 0; }
 .record-title { font-size: 15px; font-weight: 500; margin-bottom: 4px; }
 .record-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
-.record-date { font-size: 11px; color: #ccc; }
-.record-desc { font-size: 12px; color: #999; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.record-date { font-size: 14px; color: #ccc; }
+.record-desc { font-size: 14px; color: #999; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 </style>

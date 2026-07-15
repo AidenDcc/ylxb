@@ -47,7 +47,7 @@ onMounted(async () => {
 .drug-icon { font-size: 32px; }
 .drug-info { flex: 1; }
 .drug-name { font-size: 15px; font-weight: 600; }
-.drug-dosage { font-size: 12px; color: #999; margin-top: 2px; }
+.drug-dosage { font-size: 14px; color: #999; margin-top: 2px; }
 .card-body { margin-top: 12px; padding-top: 12px; border-top: 1px solid #f5f5f5; }
-.info-row { display: flex; justify-content: space-between; font-size: 13px; padding: 4px 0; color: #666; }
+.info-row { display: flex; justify-content: space-between; font-size: 14px; padding: 4px 0; color: #666; }
 </style>

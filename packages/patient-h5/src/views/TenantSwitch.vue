@@ -45,6 +45,6 @@ async function handleSwitch(tenantId: string) {
 .tenant-item { padding: 16px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #f5f5f5; cursor: pointer; }
 .tenant-item.active { background: #f0f7ff; }
 .tenant-name { font-size: 16px; font-weight: 500; display: block; }
-.tenant-type { font-size: 12px; color: #999; margin-top: 4px; display: block; }
+.tenant-type { font-size: 14px; color: #999; margin-top: 4px; display: block; }
 .hint { padding: 0 16px; }
 </style>

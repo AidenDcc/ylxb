@@ -93,15 +93,15 @@ async function handleComment() {
 .post-header { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
 .avatar { font-size: 36px; }
 .name { font-size: 14px; font-weight: 500; }
-.time { font-size: 11px; color: #ccc; }
+.time { font-size: 14px; color: #ccc; }
 .post-body { font-size: 15px; line-height: 1.8; white-space: pre-wrap; }
-.post-actions { display: flex; gap: 20px; margin-top: 16px; padding-top: 12px; border-top: 1px solid #f5f5f5; font-size: 13px; cursor: pointer; }
+.post-actions { display: flex; gap: 20px; margin-top: 16px; padding-top: 12px; border-top: 1px solid #f5f5f5; font-size: 14px; cursor: pointer; }
 .comments-section { background: #fff; margin: 0 16px 12px; border-radius: 12px; padding: 16px; }
 .comments-section h4 { font-size: 14px; margin-bottom: 12px; }
 .comment-item { display: flex; gap: 8px; margin-bottom: 12px; }
 .c-avatar { font-size: 28px; }
-.c-name { font-size: 12px; color: #999; }
-.c-text { font-size: 13px; margin-top: 2px; }
-.c-time { font-size: 10px; color: #ccc; margin-top: 2px; }
+.c-name { font-size: 14px; color: #999; }
+.c-text { font-size: 14px; margin-top: 2px; }
+.c-time { font-size: 14px; color: #ccc; margin-top: 2px; }
 .comment-bar { position: fixed; bottom: 0; left: 0; right: 0; background: #fff; display: flex; align-items: center; gap: 8px; padding: 6px 12px; border-top: 1px solid #eee; }
 </style>

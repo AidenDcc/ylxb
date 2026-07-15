@@ -55,13 +55,13 @@ onMounted(async () => {
 .posts-page { min-height: 100vh; background: #f5f7fa; }
 .post-list { padding: 12px 16px; }
 .post-card { background: #fff; border-radius: 12px; padding: 14px; margin-bottom: 10px; cursor: pointer; }
-.pinned { font-size: 11px; color: #FA8C16; margin-bottom: 6px; }
+.pinned { font-size: 14px; color: #FA8C16; margin-bottom: 6px; }
 .p-header { display: flex; align-items: center; gap: 8px; }
 .p-avatar { font-size: 32px; }
 .p-author { flex: 1; }
-.p-name { font-size: 13px; font-weight: 500; }
-.p-tenants { font-size: 10px; color: #999; }
-.p-time { font-size: 11px; color: #ccc; }
+.p-name { font-size: 14px; font-weight: 500; }
+.p-tenants { font-size: 14px; color: #999; }
+.p-time { font-size: 14px; color: #ccc; }
 .p-content { font-size: 14px; line-height: 1.6; margin: 8px 0; color: #333; }
-.p-footer { display: flex; gap: 16px; font-size: 12px; color: #999; }
+.p-footer { display: flex; gap: 16px; font-size: 14px; color: #999; }
 </style>

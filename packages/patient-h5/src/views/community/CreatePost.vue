@@ -54,5 +54,5 @@ async function handlePublish() {
 .create-page { min-height: 100vh; background: #f5f7fa; }
 .form { padding: 16px; }
 .field { padding: 12px; margin-bottom: 12px; }
-.field label { font-size: 13px; color: #666; display: block; margin-bottom: 8px; }
+.field label { font-size: 14px; color: #666; display: block; margin-bottom: 8px; }
 </style>

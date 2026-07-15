@@ -68,14 +68,14 @@ function buyNow() {
 .image-area { height: 200px; display: flex; align-items: center; justify-content: center; font-size: 80px; background: #fff; }
 .info-section { background: #fff; padding: 16px; margin-top: 1px; }
 .p-name { font-size: 17px; font-weight: 600; }
-.p-spec { font-size: 12px; color: #999; margin-top: 4px; }
+.p-spec { font-size: 14px; color: #999; margin-top: 4px; }
 .p-price { margin-top: 8px; display: flex; align-items: center; gap: 8px; }
 .price { color: #F5222D; font-size: 22px; font-weight: 700; }
-.orig { font-size: 13px; color: #ccc; text-decoration: line-through; }
+.orig { font-size: 14px; color: #ccc; text-decoration: line-through; }
 .desc-section { background: #fff; margin-top: 8px; padding: 16px; }
 .desc-section h4 { font-size: 14px; margin-bottom: 8px; }
-.desc-section p { font-size: 13px; color: #666; line-height: 1.6; }
-.approval { font-size: 11px; color: #ccc; margin-top: 12px; }
+.desc-section p { font-size: 14px; color: #666; line-height: 1.6; }
+.approval { font-size: 14px; color: #ccc; margin-top: 12px; }
 .bottom-bar { position: fixed; bottom: 0; left: 0; right: 0; background: #fff; padding: 8px 16px; display: flex; align-items: center; gap: 8px; border-top: 1px solid #eee; }
 .qty-ctrl { margin-right: auto; }
 </style>

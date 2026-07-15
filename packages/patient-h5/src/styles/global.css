@@ -36,3 +36,27 @@ img { max-width: 100%; }
   --van-warning-color: var(--warning);
   --van-danger-color: var(--danger);
 }
+
+/* 长辈模式 */
+html.elderly-mode {
+  /* 基础字号放大 */
+  font-size: 18px;
+
+  /* 更高对比度的色彩 */
+  --primary: #3A7BC8;
+  --text: #222222;
+  --text-secondary: #777777;
+
+  /* Vant 组件尺寸放大 */
+  --van-cell-font-size: 16px;
+  --van-cell-line-height: 24px;
+  --van-button-default-height: 48px;
+  --van-button-default-font-size: 16px;
+  --van-tabbar-height: 75px;
+  --van-tabbar-item-font-size: 14px;
+  --van-nav-bar-height: 52px;
+  --van-nav-bar-title-font-size: 18px;
+  --van-field-font-size: 16px;
+  --van-tag-font-size: 14px;
+  --van-switch-size: 28px;
+}

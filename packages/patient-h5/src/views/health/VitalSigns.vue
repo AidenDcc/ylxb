@@ -60,11 +60,11 @@ import { computed } from 'vue'
 .type-section { background: #fff; border-radius: 12px; padding: 16px; margin-bottom: 12px; }
 .type-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
 .type-header h3 { font-size: 15px; }
-.unit { font-size: 11px; color: #999; }
+.unit { font-size: 14px; color: #999; }
 .value-item { display: flex; align-items: center; gap: 12px; padding: 8px 0; border-bottom: 1px solid #f5f5f5; }
 .value-item:last-child { border-bottom: none; }
 .value-item.abnormal { background: #fff2f0; margin: 0 -16px; padding: 8px 16px; }
 .val { font-size: 20px; font-weight: 700; min-width: 60px; }
 .value-item.abnormal .val { color: var(--danger); }
-.time { font-size: 12px; color: #999; flex: 1; }
+.time { font-size: 14px; color: #999; flex: 1; }
 </style>

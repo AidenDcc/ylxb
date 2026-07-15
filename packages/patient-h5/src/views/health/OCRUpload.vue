@@ -65,13 +65,13 @@ async function handleUpload() {
 .content { padding: 16px; }
 .upload-zone { background: #fff; border: 2px dashed #4A90D9; border-radius: 12px; padding: 40px 16px; text-align: center; cursor: pointer; margin-top: 16px; }
 .upload-zone p { margin-top: 12px; font-size: 14px; color: #666; }
-.upload-zone .hint { font-size: 11px; color: #ccc; }
+.upload-zone .hint { font-size: 14px; color: #ccc; }
 .result-section { margin-top: 20px; background: #fff; border-radius: 12px; padding: 16px; }
 .result-section h3 { font-size: 15px; margin-bottom: 12px; }
 .result-item { padding: 10px 0; border-bottom: 1px solid #f5f5f5; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
 .result-item.abnormal { background: #fff2f0; margin: 0 -16px; padding: 10px 16px; }
-.r-name { font-size: 13px; font-weight: 500; min-width: 80px; }
+.r-name { font-size: 14px; font-weight: 500; min-width: 80px; }
 .r-value { font-size: 14px; flex: 1; }
-.r-ref { font-size: 11px; color: #ccc; margin-left: 4px; }
-.summary { margin-top: 16px; padding: 12px; background: #f0f7ff; border-radius: 8px; font-size: 13px; line-height: 1.6; }
+.r-ref { font-size: 14px; color: #ccc; margin-left: 4px; }
+.summary { margin-top: 16px; padding: 12px; background: #f0f7ff; border-radius: 8px; font-size: 14px; line-height: 1.6; }
 </style>

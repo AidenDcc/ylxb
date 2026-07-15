@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
 import { useAuthStore } from '@/stores/auth'
+import { useElderlyStore } from '@/stores/elderly'
 import { showConfirmDialog } from 'vant'
 
 const router = useRouter()
 const auth = useAuthStore()
+const elderlyStore = useElderlyStore()
 
 function handleLogout() {
   showConfirmDialog({ title: '退出登录', message: '确定要退出登录吗？' }).then(() => {
@@ -42,6 +44,14 @@ function handleLogout() {
     </div>
 
     <div class="menu-section">
+      <van-cell title="长辈模式" label="开启后字体更大，界面更简洁" center>
+        <template #extra>
+          <van-switch :model-value="elderlyStore.enabled" @update:model-value="elderlyStore.toggle" size="26" active-color="#4A90D9" />
+        </template>
+      </van-cell>
+    </div>
+
+    <div class="menu-section">
       <van-cell title="设置" icon="setting-o" is-link />
       <van-cell title="隐私管理" icon="shield-o" is-link />
       <van-cell title="关于我们" icon="info-o" is-link />
@@ -58,7 +68,7 @@ function handleLogout() {
 .user-header { background: linear-gradient(135deg, #4A90D9, #6BB5FF); color: #fff; padding: 24px 16px; text-align: center; }
 .avatar { font-size: 52px; display: block; margin-bottom: 8px; }
 .name { font-size: 18px; font-weight: 600; }
-.phone { font-size: 13px; opacity: 0.8; margin: 4px 0 8px; }
+.phone { font-size: 14px; opacity: 0.8; margin: 4px 0 8px; }
 .menu-section { background: #fff; margin: 12px 16px; border-radius: 12px; overflow: hidden; }
 .logout-btn { padding: 24px 16px; }
 </style>
