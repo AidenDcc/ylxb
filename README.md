@@ -156,10 +156,10 @@ pnpm preview
 ```
 dist/
 ├── index.html          # 入口导航页
-├── patient/            # 患者端 SPA
-├── doctor/             # 医生端 SPA
-├── management/         # 医患管理端 SPA
-└── platform/           # 平台端 SPA
+├── patient/            # 患者端
+├── doctor/             # 医生端
+├── management/         # 医患管理端
+└── platform/           # 平台端
 ```
 
 ### 快速演示账号
