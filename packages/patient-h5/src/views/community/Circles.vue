@@ -36,12 +36,12 @@ onMounted(async () => {
 </template>
 
 <style scoped>
-.circles-page { min-height: 100vh; background: #f5f7fa; }
+.circles-page { min-height: 100vh; background: var(--bg); }
 .circle-list { padding: 0 16px; }
-.circle-card { background: #fff; border-radius: 12px; padding: 14px; margin-bottom: 10px; display: flex; gap: 12px; cursor: pointer; }
+.circle-card { background: #fff; border-radius: var(--radius-md); padding: 14px; margin-bottom: 10px; display: flex; gap: 12px; cursor: pointer; box-shadow: var(--shadow-sm); }
 .cover { font-size: 40px; }
 .info { flex: 1; }
-.name { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
-.desc { font-size: 14px; color: #999; margin-bottom: 4px; }
-.stats { font-size: 14px; color: #ccc; }
+.name { font-size: 15px; font-weight: 600; margin-bottom: 4px; color: var(--text-primary); }
+.desc { font-size: 14px; color: var(--text-secondary); margin-bottom: 4px; }
+.stats { font-size: 14px; color: var(--text-tertiary); }
 </style>

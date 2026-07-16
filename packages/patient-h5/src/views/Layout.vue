@@ -42,7 +42,7 @@ watch(() => router.currentRoute.value.path, (path) => {
     </div>
 
     <!-- 底部导航 -->
-    <van-tabbar v-model="active" @change="(i: number) => router.push(tabs[i].path)" :fixed="true" :border="true" active-color="#2463EB" :style="{ '--van-tabbar-height': tabbarHeight, '--van-tabbar-item-active-font-weight': 'bold', '--van-tabbar-item-font-size': '14px', '--van-tabbar-item-font-weight': '500' }">
+    <van-tabbar v-model="active" @change="(i: number) => router.push(tabs[i].path)" :fixed="true" :border="true" active-color="var(--primary-blue)" :style="{ '--van-tabbar-height': tabbarHeight, '--van-tabbar-item-active-font-weight': 'bold', '--van-tabbar-item-font-size': '14px', '--van-tabbar-item-font-weight': '500' }">
       <van-tabbar-item v-for="(tab, idx) in tabs" :key="idx" :icon="tab.icon">
         {{ tab.label }}
       </van-tabbar-item>
@@ -58,10 +58,10 @@ import { ref, watch, computed } from 'vue'
 .layout {
   min-height: 100vh;
   padding-bottom: 70px;
-  background: #f5f7fa;
+  background: var(--bg);
 }
 .top-bar {
-  background: var(--primary, #4A90D9);
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light));
   color: #fff;
   padding: 8px 16px;
   display: flex;

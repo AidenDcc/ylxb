@@ -19,7 +19,7 @@ function handleLogout() {
 <template>
   <div class="profile-page">
     <div class="user-header">
-      <span class="avatar">{{ auth.user?.avatar || '👤' }}</span>
+      <span class="avatar-circle"><van-icon name="contact-o" size="28" color="#fff" /></span>
       <div class="name">{{ auth.user?.name || '用户' }}</div>
       <div class="phone">{{ auth.user?.phone?.replace(/(\d{3})\d{4}(\d{4})/, '$1****$2') || '' }}</div>
       <van-tag v-if="auth.user?.realNameVerified" type="success" size="medium">已实名</van-tag>
@@ -46,7 +46,7 @@ function handleLogout() {
     <div class="menu-section">
       <van-cell title="长辈模式" label="开启后字体更大，界面更简洁" center>
         <template #extra>
-          <van-switch :model-value="elderlyStore.enabled" @update:model-value="elderlyStore.toggle" size="26" active-color="#4A90D9" />
+          <van-switch :model-value="elderlyStore.enabled" @update:model-value="elderlyStore.toggle" size="26" active-color="var(--primary-blue)" />
         </template>
       </van-cell>
     </div>
@@ -64,11 +64,16 @@ function handleLogout() {
 </template>
 
 <style scoped>
-.profile-page { min-height: 100vh; background: #f5f7fa; padding-bottom: 30px; }
-.user-header { background: linear-gradient(135deg, #4A90D9, #6BB5FF); color: #fff; padding: 24px 16px; text-align: center; }
-.avatar { font-size: 52px; display: block; margin-bottom: 8px; }
+.profile-page { min-height: 100vh; background: var(--bg); padding-bottom: 30px; }
+.user-header { background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light)); color: #fff; padding: 32px 16px; text-align: center; }
+.avatar-circle {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 8px;
+}
 .name { font-size: 18px; font-weight: 600; }
 .phone { font-size: 14px; opacity: 0.8; margin: 4px 0 8px; }
-.menu-section { background: #fff; margin: 12px 16px; border-radius: 12px; overflow: hidden; }
+.menu-section { background: #fff; margin: 12px 16px; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm); }
 .logout-btn { padding: 24px 16px; }
 </style>

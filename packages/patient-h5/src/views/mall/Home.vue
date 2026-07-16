@@ -40,7 +40,10 @@ onMounted(async () => {
 
     <div class="product-grid">
       <div v-for="p in filteredProducts" :key="p.id" class="product-card" @click="router.push(`/mall/product/${p.id}`)">
-        <div class="p-image">{{ p.images[0] || '📦' }}</div>
+        <div class="p-image">
+          <img v-if="p.images[0]" :src="p.images[0]" alt="product" />
+          <van-icon v-else name="shop-o" size="32" color="var(--text-tertiary)" />
+        </div>
         <div class="p-info">
           <div class="p-name">{{ p.name }}</div>
           <div class="p-spec">{{ p.specification }}</div>
@@ -58,18 +61,19 @@ onMounted(async () => {
 
 
 <style scoped>
-.mall-page { min-height: 100vh; background: #f5f7fa; }
+.mall-page { min-height: 100vh; background: var(--bg); }
 .category-bar { display: flex; gap: 0; background: #fff; padding: 8px 16px; overflow-x: auto; }
 .cat-item { padding: 6px 16px; border-radius: 20px; font-size: 14px; white-space: nowrap; cursor: pointer; }
-.cat-item.active { background: #4A90D9; color: #fff; }
+.cat-item.active { background: var(--primary-blue); color: #fff; }
 .product-grid { padding: 12px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-.product-card { background: #fff; border-radius: 10px; overflow: hidden; cursor: pointer; }
-.p-image { height: 120px; display: flex; align-items: center; justify-content: center; font-size: 48px; background: #f8f9fa; }
+.product-card { background: #fff; border-radius: var(--radius-md); overflow: hidden; cursor: pointer; box-shadow: var(--shadow-sm); }
+.p-image { height: 120px; display: flex; align-items: center; justify-content: center; background: #f8f9fa; }
+.p-image img { width: 100%; height: 100%; object-fit: cover; }
 .p-info { padding: 10px; }
-.p-name { font-size: 14px; font-weight: 500; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.p-spec { font-size: 14px; color: #ccc; margin: 4px 0; }
+.p-name { font-size: 14px; font-weight: 500; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; color: var(--text-primary); }
+.p-spec { font-size: 14px; color: var(--text-tertiary); margin: 4px 0; }
 .p-price { margin-top: 4px; }
-.price { color: #F5222D; font-size: 16px; font-weight: 700; }
-.orig-price { font-size: 14px; color: #ccc; text-decoration: line-through; margin-left: 4px; }
-.p-sold { font-size: 14px; color: #ccc; margin-top: 2px; }
+.price { color: var(--danger); font-size: 16px; font-weight: 700; }
+.orig-price { font-size: 14px; color: var(--text-tertiary); text-decoration: line-through; margin-left: 4px; }
+.p-sold { font-size: 14px; color: var(--text-tertiary); margin-top: 2px; }
 </style>

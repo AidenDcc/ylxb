@@ -46,18 +46,18 @@ onMounted(async () => {
 </template>
 
 <style scoped>
-.detail-page { min-height: 100vh; background: #f5f7fa; }
+.detail-page { min-height: 100vh; background: var(--bg); }
 .content { padding: 16px; }
 .title-section { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
 .title-section h2 { font-size: 18px; }
-.meta { font-size: 14px; color: #999; margin-bottom: 16px; }
-.text-content { background: #fff; border-radius: 8px; padding: 16px; font-size: 14px; line-height: 1.8; white-space: pre-wrap; }
-.ocr-section { margin-top: 16px; background: #fff; border-radius: 8px; padding: 16px; }
+.meta { font-size: 14px; color: var(--text-secondary); margin-bottom: 16px; }
+.text-content { background: #fff; border-radius: var(--radius-sm); padding: 16px; font-size: 14px; line-height: 1.8; white-space: pre-wrap; }
+.ocr-section { margin-top: 16px; background: #fff; border-radius: var(--radius-sm); padding: 16px; }
 .ocr-section h3 { font-size: 15px; margin-bottom: 8px; }
-.confidence { font-size: 14px; color: #999; margin-bottom: 12px; }
-.ocr-item { padding: 10px 0; border-bottom: 1px solid #f5f5f5; display: flex; align-items: center; gap: 8px; }
+.confidence { font-size: 14px; color: var(--text-secondary); margin-bottom: 12px; }
+.ocr-item { padding: 10px 0; border-bottom: 1px solid var(--border-light); display: flex; align-items: center; gap: 8px; }
 .ocr-item.abnormal { background: #fff2f0; margin: 0 -16px; padding: 10px 16px; }
 .item-name { font-size: 14px; font-weight: 500; min-width: 80px; }
 .item-value { font-size: 14px; }
-.ref { font-size: 14px; color: #ccc; }
+.ref { font-size: 14px; color: var(--text-tertiary); }
 </style>

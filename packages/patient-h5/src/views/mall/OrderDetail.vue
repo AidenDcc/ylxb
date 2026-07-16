@@ -53,15 +53,15 @@ onMounted(async () => {
 </template>
 
 <style scoped>
-.od-page { min-height: 100vh; background: #f5f7fa; }
+.od-page { min-height: 100vh; background: var(--bg); }
 .content { padding: 16px; }
-.status-card { background: linear-gradient(135deg, #4A90D9, #6BB5FF); color: #fff; border-radius: 12px; padding: 20px; margin-bottom: 12px; }
+.status-card { background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light)); color: #fff; border-radius: var(--radius-md); padding: 20px; margin-bottom: 12px; box-shadow: var(--shadow-sm); }
 .status { font-size: 20px; font-weight: 700; }
 .order-no { font-size: 14px; opacity: 0.8; margin-top: 4px; }
-.section { background: #fff; border-radius: 12px; padding: 16px; margin-bottom: 12px; }
-.section h4 { font-size: 14px; margin-bottom: 8px; }
-.section p { font-size: 14px; color: #666; line-height: 1.6; }
-.prod-item { display: flex; align-items: center; gap: 8px; padding: 8px 0; font-size: 14px; border-bottom: 1px solid #f5f5f5; }
+.section { background: #fff; border-radius: var(--radius-md); padding: 16px; margin-bottom: 12px; box-shadow: var(--shadow-sm); }
+.section h4 { font-size: 14px; margin-bottom: 8px; color: var(--text-primary); }
+.section p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+.prod-item { display: flex; align-items: center; gap: 8px; padding: 8px 0; font-size: 14px; border-bottom: 1px solid var(--border-light); }
 .pname { flex: 1; }
-.log-update { font-size: 14px; color: #999; padding: 2px 0; }
+.log-update { font-size: 14px; color: var(--text-secondary); padding: 2px 0; }
 </style>

@@ -51,8 +51,8 @@ async function handlePublish() {
 </template>
 
 <style scoped>
-.create-page { min-height: 100vh; background: #f5f7fa; }
+.create-page { min-height: 100vh; background: var(--bg); }
 .form { padding: 16px; }
 .field { padding: 12px; margin-bottom: 12px; }
-.field label { font-size: 14px; color: #666; display: block; margin-bottom: 8px; }
+.field label { font-size: 14px; color: var(--text-secondary); display: block; margin-bottom: 8px; }
 </style>

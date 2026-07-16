@@ -28,9 +28,12 @@ async function handleSwitch(tenantId: string) {
       >
         <div class="tenant-info">
           <span class="tenant-name">{{ b.tenantName }}</span>
-          <span class="tenant-type">{{ b.tenantType === 'hospital' ? '🏥' : b.tenantType === 'pharmacy' ? '💊' : '🩺' }} {{ b.role === 'patient' ? '患者' : '医生' }}</span>
+          <span class="tenant-type">
+            <van-icon :name="b.tenantType === 'hospital' ? 'hotel-o' : b.tenantType === 'pharmacy' ? 'orders-o' : 'contact-o'" size="14" />
+            {{ b.role === 'patient' ? '患者' : '医生' }}
+          </span>
         </div>
-        <van-icon v-if="b.tenantId === auth.user?.activeTenantId" name="success" color="#4A90D9" size="20" />
+        <van-icon v-if="b.tenantId === auth.user?.activeTenantId" name="success" color="var(--primary-blue)" size="20" />
       </div>
     </div>
     <div class="hint">
@@ -40,11 +43,11 @@ async function handleSwitch(tenantId: string) {
 </template>
 
 <style scoped>
-.tenant-switch-page { min-height: 100vh; background: #f5f7fa; }
-.tenant-list { margin: 16px; background: #fff; border-radius: 12px; overflow: hidden; }
-.tenant-item { padding: 16px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #f5f5f5; cursor: pointer; }
+.tenant-switch-page { min-height: 100vh; background: var(--bg); }
+.tenant-list { margin: 16px; background: #fff; border-radius: var(--radius-md); overflow: hidden; }
+.tenant-item { padding: 16px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-light); cursor: pointer; }
 .tenant-item.active { background: #f0f7ff; }
 .tenant-name { font-size: 16px; font-weight: 500; display: block; }
-.tenant-type { font-size: 14px; color: #999; margin-top: 4px; display: block; }
+.tenant-type { font-size: 14px; color: var(--text-secondary); margin-top: 4px; display: block; }
 .hint { padding: 0 16px; }
 </style>

@@ -62,9 +62,9 @@ async function handleComment() {
       </div>
       <div class="post-body">{{ postDetail.content }}</div>
       <div class="post-actions">
-        <span @click="handleLike">❤️ {{ postDetail.likeCount }}</span>
-        <span>💬 {{ postDetail.commentCount }}</span>
-        <span @click="handleCollect">⭐ {{ postDetail.collectCount }}</span>
+        <span @click="handleLike"><van-icon :name="postDetail.isLiked ? 'like' : 'like-o'" size="16" /> {{ postDetail.likeCount }}</span>
+        <span><van-icon name="comment-o" size="16" /> {{ postDetail.commentCount }}</span>
+        <span @click="handleCollect"><van-icon :name="postDetail.isCollected ? 'star' : 'star-o'" size="16" /> {{ postDetail.collectCount }}</span>
       </div>
     </div>
     <!-- 评论列表 -->
@@ -88,20 +88,21 @@ async function handleComment() {
 </template>
 
 <style scoped>
-.post-detail { min-height: 100vh; background: #f5f7fa; padding-bottom: 50px; }
-.content { background: #fff; padding: 16px; margin: 12px 16px; border-radius: 12px; }
+.post-detail { min-height: 100vh; background: var(--bg); padding-bottom: 50px; }
+.content { background: #fff; padding: 16px; margin: 12px 16px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); }
 .post-header { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
 .avatar { font-size: 36px; }
-.name { font-size: 14px; font-weight: 500; }
-.time { font-size: 14px; color: #ccc; }
-.post-body { font-size: 15px; line-height: 1.8; white-space: pre-wrap; }
-.post-actions { display: flex; gap: 20px; margin-top: 16px; padding-top: 12px; border-top: 1px solid #f5f5f5; font-size: 14px; cursor: pointer; }
-.comments-section { background: #fff; margin: 0 16px 12px; border-radius: 12px; padding: 16px; }
-.comments-section h4 { font-size: 14px; margin-bottom: 12px; }
+.name { font-size: 14px; font-weight: 500; color: var(--text-primary); }
+.time { font-size: 14px; color: var(--text-tertiary); }
+.post-body { font-size: 15px; line-height: 1.8; white-space: pre-wrap; color: var(--text-primary); }
+.post-actions { display: flex; gap: 20px; margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border-light); font-size: 14px; cursor: pointer; color: var(--text-secondary); }
+.post-actions span { display: flex; align-items: center; gap: 2px; }
+.comments-section { background: #fff; margin: 0 16px 12px; border-radius: var(--radius-md); padding: 16px; box-shadow: var(--shadow-sm); }
+.comments-section h4 { font-size: 14px; margin-bottom: 12px; color: var(--text-primary); }
 .comment-item { display: flex; gap: 8px; margin-bottom: 12px; }
 .c-avatar { font-size: 28px; }
-.c-name { font-size: 14px; color: #999; }
-.c-text { font-size: 14px; margin-top: 2px; }
-.c-time { font-size: 14px; color: #ccc; margin-top: 2px; }
-.comment-bar { position: fixed; bottom: 0; left: 0; right: 0; background: #fff; display: flex; align-items: center; gap: 8px; padding: 6px 12px; border-top: 1px solid #eee; }
+.c-name { font-size: 14px; color: var(--text-secondary); }
+.c-text { font-size: 14px; margin-top: 2px; color: var(--text-primary); }
+.c-time { font-size: 14px; color: var(--text-tertiary); margin-top: 2px; }
+.comment-bar { position: fixed; bottom: 0; left: 0; right: 0; background: #fff; display: flex; align-items: center; gap: 8px; padding: 6px 12px; border-top: 1px solid var(--border); box-shadow: 0 -1px 3px rgba(0,0,0,0.04); }
 </style>

@@ -16,7 +16,7 @@ onMounted(async () => {
 })
 
 const typeIcons: Record<string, string> = {
-  medical_history: '📋', exam_report: '📄', medication: '💊', daily_feeling: '😊', vital_sign: '📊', device_data: '📟',
+  medical_history: 'description-o', exam_report: 'records-o', medication: 'orders-o', daily_feeling: 'smile-o', vital_sign: 'chart-trending-o', device_data: 'wap-home-o',
 }
 </script>
 
@@ -29,7 +29,7 @@ const typeIcons: Record<string, string> = {
     <van-pull-refresh v-model="loading" @refresh="onMounted">
       <div class="record-list" v-if="records.length">
         <div v-for="r in records" :key="r.id" class="record-card" @click="router.push(`/health/records/${r.id}`)">
-          <div class="record-icon">{{ typeIcons[r.type] || '📋' }}</div>
+          <van-icon :name="typeIcons[r.type] || 'description-o'" size="24" :color="r.type === 'medication' || r.type === 'daily_feeling' ? 'var(--primary-green)' : 'var(--primary-blue)'" class="record-icon" />
           <div class="record-content">
             <div class="record-title">{{ r.title }}</div>
             <div class="record-meta">
@@ -38,7 +38,7 @@ const typeIcons: Record<string, string> = {
             </div>
             <div class="record-desc" v-if="r.content">{{ r.content.slice(0, 60) }}{{ r.content.length > 60 ? '...' : '' }}</div>
           </div>
-          <van-icon name="arrow" color="#ccc" />
+          <van-icon name="arrow" color="var(--text-tertiary)" />
         </div>
       </div>
       <van-empty v-else description="暂无健康档案" />
@@ -48,15 +48,15 @@ const typeIcons: Record<string, string> = {
 </template>
 
 <style scoped>
-.records-page { min-height: 100vh; background: #f5f7fa; }
+.records-page { min-height: 100vh; background: var(--bg); }
 .actions-bar { padding: 12px 16px; display: flex; gap: 8px; }
-.record-list { background: #fff; margin: 0 16px; border-radius: 12px; overflow: hidden; }
-.record-card { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-bottom: 1px solid #f5f5f5; cursor: pointer; }
+.record-list { background: #fff; margin: 0 16px; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm); }
+.record-card { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-bottom: 1px solid var(--border-light); cursor: pointer; }
 .record-card:last-child { border-bottom: none; }
-.record-icon { font-size: 32px; }
+.record-icon { flex-shrink: 0; }
 .record-content { flex: 1; min-width: 0; }
-.record-title { font-size: 15px; font-weight: 500; margin-bottom: 4px; }
+.record-title { font-size: 15px; font-weight: 500; margin-bottom: 4px; color: var(--text-primary); }
 .record-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
-.record-date { font-size: 14px; color: #ccc; }
-.record-desc { font-size: 14px; color: #999; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.record-date { font-size: 14px; color: var(--text-tertiary); }
+.record-desc { font-size: 14px; color: var(--text-secondary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 </style>

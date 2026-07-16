@@ -56,14 +56,14 @@ onMounted(async () => {
 
 
 <style scoped>
-.consultation-page { min-height: 100vh; background: #f5f7fa; }
+.consultation-page { min-height: 100vh; background: var(--bg); }
 .session-list { padding: 12px 16px; }
-.session-card { background: #fff; border-radius: 12px; padding: 14px; margin-bottom: 10px; cursor: pointer; }
+.session-card { background: #fff; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); padding: 14px; margin-bottom: 10px; cursor: pointer; }
 .s-header { display: flex; align-items: center; gap: 10px; }
 .doctor-avatar { font-size: 36px; }
 .doctor-info { flex: 1; }
 .doctor-name { font-size: 15px; font-weight: 500; }
-.doctor-dept { font-size: 14px; color: #999; margin-top: 2px; }
-.s-subject { font-size: 14px; color: #666; margin: 8px 0; padding: 6px 10px; background: #f5f7fa; border-radius: 6px; }
-.s-footer { display: flex; justify-content: space-between; font-size: 14px; color: #ccc; }
+.doctor-dept { font-size: 14px; color: var(--text-secondary); margin-top: 2px; }
+.s-subject { font-size: 14px; color: var(--text-secondary); margin: 8px 0; padding: 6px 10px; background: var(--bg); border-radius: 6px; }
+.s-footer { display: flex; justify-content: space-between; font-size: 14px; color: var(--text-tertiary); }
 </style>

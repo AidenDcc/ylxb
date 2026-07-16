@@ -64,18 +64,18 @@ function buyNow() {
 </template>
 
 <style scoped>
-.detail-page { min-height: 100vh; background: #f5f7fa; padding-bottom: 60px; }
+.detail-page { min-height: 100vh; background: var(--bg); padding-bottom: 60px; }
 .image-area { height: 200px; display: flex; align-items: center; justify-content: center; font-size: 80px; background: #fff; }
-.info-section { background: #fff; padding: 16px; margin-top: 1px; }
-.p-name { font-size: 17px; font-weight: 600; }
-.p-spec { font-size: 14px; color: #999; margin-top: 4px; }
+.info-section { background: #fff; padding: 16px; margin-top: 1px; box-shadow: var(--shadow-sm); }
+.p-name { font-size: 17px; font-weight: 600; color: var(--text-primary); }
+.p-spec { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
 .p-price { margin-top: 8px; display: flex; align-items: center; gap: 8px; }
-.price { color: #F5222D; font-size: 22px; font-weight: 700; }
-.orig { font-size: 14px; color: #ccc; text-decoration: line-through; }
-.desc-section { background: #fff; margin-top: 8px; padding: 16px; }
-.desc-section h4 { font-size: 14px; margin-bottom: 8px; }
-.desc-section p { font-size: 14px; color: #666; line-height: 1.6; }
-.approval { font-size: 14px; color: #ccc; margin-top: 12px; }
-.bottom-bar { position: fixed; bottom: 0; left: 0; right: 0; background: #fff; padding: 8px 16px; display: flex; align-items: center; gap: 8px; border-top: 1px solid #eee; }
+.price { color: var(--danger); font-size: 22px; font-weight: 700; }
+.orig { font-size: 14px; color: var(--text-tertiary); text-decoration: line-through; }
+.desc-section { background: #fff; margin-top: 8px; padding: 16px; box-shadow: var(--shadow-sm); border-radius: var(--radius-md); }
+.desc-section h4 { font-size: 14px; margin-bottom: 8px; color: var(--text-primary); }
+.desc-section p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+.approval { font-size: 14px; color: var(--text-tertiary); margin-top: 12px; }
+.bottom-bar { position: fixed; bottom: 0; left: 0; right: 0; background: #fff; padding: 8px 16px; display: flex; align-items: center; gap: 8px; border-top: 1px solid var(--border); box-shadow: 0 -1px 3px rgba(0,0,0,0.04); }
 .qty-ctrl { margin-right: auto; }
 </style>

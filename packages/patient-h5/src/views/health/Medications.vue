@@ -21,12 +21,12 @@ onMounted(async () => {
     <div class="content">
       <div class="card" v-for="r in reminders" :key="r.id">
         <div class="card-header">
-          <span class="drug-icon">💊</span>
+          <span class="drug-icon"><van-icon name="orders-o" size="20" color="var(--primary-green)" /></span>
           <div class="drug-info">
             <div class="drug-name">{{ r.drugName }}</div>
             <div class="drug-dosage">{{ r.dosage }} · {{ r.frequency === 'daily' ? '每日' : '每周' }} · {{ r.time }}</div>
           </div>
-          <van-switch :model-value="r.enabled" size="20" active-color="#4A90D9" />
+          <van-switch :model-value="r.enabled" size="20" active-color="var(--primary-green)" />
         </div>
         <div class="card-body">
           <div class="info-row"><span>周期</span><span>{{ r.startDate }} ~ {{ r.endDate }}</span></div>
@@ -40,14 +40,19 @@ onMounted(async () => {
 </template>
 
 <style scoped>
-.medications-page { min-height: 100vh; background: #f5f7fa; }
+.medications-page { min-height: 100vh; background: var(--bg); }
 .content { padding: 16px; }
-.card { background: #fff; border-radius: 12px; padding: 16px; margin-bottom: 12px; }
+.card { background: #fff; border-radius: var(--radius-md); padding: 16px; margin-bottom: 12px; box-shadow: var(--shadow-sm); }
 .card-header { display: flex; align-items: center; gap: 12px; }
-.drug-icon { font-size: 32px; }
+.drug-icon {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: rgba(16, 185, 129, 0.12);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
 .drug-info { flex: 1; }
-.drug-name { font-size: 15px; font-weight: 600; }
-.drug-dosage { font-size: 14px; color: #999; margin-top: 2px; }
-.card-body { margin-top: 12px; padding-top: 12px; border-top: 1px solid #f5f5f5; }
-.info-row { display: flex; justify-content: space-between; font-size: 14px; padding: 4px 0; color: #666; }
+.drug-name { font-size: 15px; font-weight: 600; color: var(--text-primary); }
+.drug-dosage { font-size: 14px; color: var(--text-secondary); margin-top: 2px; }
+.card-body { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border-light); }
+.info-row { display: flex; justify-content: space-between; font-size: 14px; padding: 4px 0; color: var(--text-secondary); }
 </style>

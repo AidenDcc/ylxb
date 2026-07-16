@@ -30,7 +30,7 @@ async function handleLogin() {
 <template>
   <div class="login-page">
     <div class="login-header">
-      <div class="logo">🏥</div>
+      <div class="logo"><van-icon name="hotel-o" size="36" color="#fff" /></div>
       <h1>医路相伴</h1>
       <p>院外医患沟通平台 · 患者端</p>
     </div>
@@ -50,12 +50,12 @@ async function handleLogin() {
 </template>
 
 <style scoped>
-.login-page { min-height: 100vh; background: linear-gradient(135deg, #e8f4fd 0%, #f5f7fa 100%); padding: 40px 24px; }
+.login-page { min-height: 100vh; background: linear-gradient(135deg, #EBF5FF 0%, #ECFDF5 50%, #F2F4F7 100%); padding: 40px 24px; }
 .login-header { text-align: center; margin-bottom: 40px; }
-.logo { font-size: 64px; margin-bottom: 12px; }
-.login-header h1 { font-size: 24px; color: var(--primary); margin-bottom: 8px; }
-.login-header p { font-size: 14px; color: #999; }
-.login-form { background: #fff; border-radius: 16px; padding: 24px 16px; }
+.logo { width: 72px; height: 72px; border-radius: 50%; background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light)); display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; }
+.login-header h1 { font-size: 24px; color: var(--primary-blue); margin-bottom: 8px; }
+.login-header p { font-size: 14px; color: var(--text-secondary); }
+.login-form { background: #fff; border-radius: var(--radius-lg); padding: 24px 16px; box-shadow: var(--shadow-md); }
 .links { text-align: center; margin-top: 16px; font-size: 14px; color: var(--primary); cursor: pointer; }
-.demo-hint { margin-top: 20px; padding: 12px; background: #fffbe6; border-radius: 8px; font-size: 14px; color: #999; text-align: center; line-height: 1.8; }
+.demo-hint { margin-top: 20px; padding: 12px; background: #fffbe6; border-radius: var(--radius-sm); font-size: 14px; color: var(--text-secondary); text-align: center; line-height: 1.8; }
 </style>

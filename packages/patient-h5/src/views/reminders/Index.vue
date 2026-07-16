@@ -43,7 +43,7 @@ async function deleteReminder(id: string) {
             <div class="drug-name">{{ r.drugName }}</div>
             <div class="drug-meta">{{ r.dosage }} · {{ r.frequency === 'daily' ? '每天' : r.frequency === 'weekly' ? '每周' : '自定义' }}</div>
           </div>
-          <van-switch :model-value="r.enabled" @update:model-value="toggleReminder(r)" size="20" active-color="#4A90D9" />
+          <van-switch :model-value="r.enabled" @update:model-value="toggleReminder(r)" size="20" active-color="var(--primary-green)" />
         </div>
         <div class="card-foot">
           <span>{{ r.startDate }} ~ {{ r.endDate }}</span>
@@ -56,13 +56,13 @@ async function deleteReminder(id: string) {
 </template>
 
 <style scoped>
-.reminders-page { min-height: 100vh; background: #f5f7fa; }
+.reminders-page { min-height: 100vh; background: var(--bg); }
 .content { padding: 16px; }
-.card { background: #fff; border-radius: 12px; padding: 16px; margin-bottom: 12px; }
+.card { background: #fff; border-radius: var(--radius-md); padding: 16px; margin-bottom: 12px; }
 .card-head { display: flex; align-items: center; gap: 12px; }
-.time-badge { background: #4A90D9; color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.time-badge { background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light)); color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 14px; font-weight: 600; white-space: nowrap; }
 .drug-info { flex: 1; }
 .drug-name { font-size: 15px; font-weight: 600; }
-.drug-meta { font-size: 14px; color: #999; margin-top: 2px; }
-.card-foot { display: flex; justify-content: space-between; align-items: center; margin-top: 12px; padding-top: 12px; border-top: 1px solid #f5f5f5; font-size: 14px; color: #ccc; }
+.drug-meta { font-size: 14px; color: var(--text-secondary); margin-top: 2px; }
+.card-foot { display: flex; justify-content: space-between; align-items: center; margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border-light); font-size: 14px; color: var(--text-tertiary); }
 </style>

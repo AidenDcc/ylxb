@@ -47,6 +47,6 @@ async function handleRegister() {
 </template>
 
 <style scoped>
-.register-page { min-height: 100vh; background: #f5f7fa; }
-.form-wrap { background: #fff; margin: 16px; border-radius: 12px; padding: 8px 0; }
+.register-page { min-height: 100vh; background: var(--bg); }
+.form-wrap { background: #fff; margin: 16px; border-radius: var(--radius-md); padding: 8px 0; }
 </style>

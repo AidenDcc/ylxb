@@ -61,14 +61,14 @@ import { computed } from 'vue'
 </script>
 
 <style scoped>
-.cart-page { min-height: 100vh; background: #f5f7fa; padding-bottom: 60px; }
-.cart-list { background: #fff; margin: 12px 16px; border-radius: 12px; overflow: hidden; }
-.cart-item { display: flex; align-items: center; gap: 12px; padding: 14px; border-bottom: 1px solid #f5f5f5; }
+.cart-page { min-height: 100vh; background: var(--bg); padding-bottom: 60px; }
+.cart-list { background: #fff; margin: 12px 16px; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm); }
+.cart-item { display: flex; align-items: center; gap: 12px; padding: 14px; border-bottom: 1px solid var(--border-light); }
 .item-img { font-size: 36px; }
 .item-info { flex: 1; }
-.item-name { font-size: 14px; font-weight: 500; }
-.item-price { color: #F5222D; font-size: 14px; font-weight: 600; margin-top: 4px; }
-.bottom-bar { position: fixed; bottom: 0; left: 0; right: 0; background: #fff; padding: 12px 16px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid #eee; }
-.total { font-size: 14px; }
-.total .price { color: #F5222D; font-size: 18px; font-weight: 700; }
+.item-name { font-size: 14px; font-weight: 500; color: var(--text-primary); }
+.item-price { color: var(--danger); font-size: 14px; font-weight: 600; margin-top: 4px; }
+.bottom-bar { position: fixed; bottom: 0; left: 0; right: 0; background: #fff; padding: 12px 16px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border); box-shadow: 0 -1px 3px rgba(0,0,0,0.04); }
+.total { font-size: 14px; color: var(--text-primary); }
+.total .price { color: var(--danger); font-size: 18px; font-weight: 700; }
 </style>

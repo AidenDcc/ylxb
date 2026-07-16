@@ -90,14 +90,14 @@ async function handleCloseSession() {
 </template>
 
 <style scoped>
-.chat-page { display: flex; flex-direction: column; height: 100vh; background: #f5f7fa; }
+.chat-page { display: flex; flex-direction: column; height: 100vh; background: var(--bg); }
 .chat-body { flex: 1; overflow-y: auto; padding: 12px; }
 .msg-item { margin-bottom: 12px; display: flex; }
 .msg-item.mine { justify-content: flex-end; }
-.msg-bubble { max-width: 80%; padding: 10px 14px; border-radius: 12px; background: #fff; }
-.msg-item.mine .msg-bubble { background: #4A90D9; color: #fff; }
+.msg-bubble { max-width: 80%; padding: 10px 14px; border-radius: var(--radius-md); background: #fff; }
+.msg-item.mine .msg-bubble { background: var(--primary-blue); color: #fff; }
 .msg-text { font-size: 14px; line-height: 1.5; }
 .msg-time { font-size: 14px; opacity: 0.5; margin-top: 4px; text-align: right; }
-.input-bar { display: flex; align-items: center; gap: 8px; padding: 8px 12px; background: #fff; border-top: 1px solid #eee; }
-.closed-hint { text-align: center; padding: 6px; font-size: 14px; color: #999; background: #fff; }
+.input-bar { display: flex; align-items: center; gap: 8px; padding: 8px 12px; background: #fff; border-top: 1px solid var(--border); box-shadow: 0 -1px 3px rgba(0,0,0,0.04); }
+.closed-hint { text-align: center; padding: 6px; font-size: 14px; color: var(--text-secondary); background: #fff; }
 </style>

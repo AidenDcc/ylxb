@@ -1,13 +1,45 @@
 :root {
-  --primary: #4A90D9;
-  --success: #52C41A;
-  --warning: #FA8C16;
-  --danger: #F5222D;
-  --bg: #f5f7fa;
+  /* === 品牌色 === */
+  --primary-blue: #2B6FF2;
+  --primary-blue-light: #5B93F7;
+  --primary-blue-dark: #1A54C7;
+  --primary-green: #10B981;
+  --primary-green-light: #34D399;
+
+  /* === 语义色 === */
+  --primary: var(--primary-blue);
+  --success: var(--primary-green);
+  --warning: #F59E0B;
+  --danger: #EF4444;
+  --info: #3B82F6;
+
+  /* === 表面/背景 === */
+  --bg: #F2F4F7;
+  --bg-card: #FFFFFF;
   --white: #ffffff;
-  --text: #333333;
-  --text-secondary: #999999;
-  --border: #ebedf0;
+
+  /* === 文字 === */
+  --text: #1F2937;
+  --text-primary: #1F2937;
+  --text-secondary: #6B7280;
+  --text-tertiary: #9CA3AF;
+
+  /* === 边框 === */
+  --border: #E5E7EB;
+  --border-light: #F3F4F6;
+
+  /* === 阴影 === */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.06), 0 4px 6px rgba(0, 0, 0, 0.04);
+
+  /* === 圆角 === */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
 }
 
 * {
@@ -20,34 +52,35 @@ html, body, #app {
   height: 100%;
   width: 100%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   color: var(--text);
   background: var(--bg);
   -webkit-font-smoothing: antialiased;
 }
 
-a { text-decoration: none; color: var(--primary); }
+a { text-decoration: none; color: var(--primary-blue); }
 img { max-width: 100%; }
 
 /* Vant 主题覆盖 */
 :root {
-  --van-primary-color: var(--primary);
-  --van-success-color: var(--success);
+  --van-primary-color: var(--primary-blue);
+  --van-success-color: var(--primary-green);
   --van-warning-color: var(--warning);
   --van-danger-color: var(--danger);
 }
 
 /* 长辈模式 */
 html.elderly-mode {
-  /* 基础字号放大 */
   font-size: 18px;
 
-  /* 更高对比度的色彩 */
-  --primary: #3A7BC8;
-  --text: #222222;
-  --text-secondary: #777777;
+  --primary-blue: var(--primary-blue-dark);
+  --primary-blue-light: #3A74E7;
+  --primary-green: #059669;
+  --primary-green-light: #10B981;
+  --text: #111827;
+  --text-primary: #111827;
+  --text-secondary: #4B5563;
 
-  /* Vant 组件尺寸放大 */
   --van-cell-font-size: 16px;
   --van-cell-line-height: 24px;
   --van-button-default-height: 48px;
